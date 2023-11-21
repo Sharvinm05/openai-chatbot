@@ -29,7 +29,7 @@ This project implements a generative AI chatbot for the real estate domain using
 
 3. Set up environment variables:
 
-Create a .env file in the project root and add your OpenAI API key:
+    Create a .env file in the project root and add your OpenAI API key:
 
     ```bash
     OPENAI_API_KEY=your-api-key-here
