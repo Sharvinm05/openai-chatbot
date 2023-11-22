@@ -2,9 +2,10 @@ import os
 from flask import Flask, render_template, request
 from openai import OpenAI
 from dotenv import load_dotenv
+import streamlit as st
 load_dotenv()
 
-api_key = os.environ['OPENAI_API_KEY']
+api_key = st.secrets["OPENAI_API_KEY"]
 client = OpenAI(api_key=api_key)
 app = Flask(__name__)
 
@@ -30,4 +31,4 @@ def get_bot_response():
     return response
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run()
